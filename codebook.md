@@ -11,14 +11,14 @@ Creating the Tidy Dataset
 ### The dataset was prepared for analysis by performing the following steps:
 *Open the run_analysis.R script to check the actual codes used per step.*
 1. Download and unzip necessary files from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
-2. Load the *features, activity labels, training and test subjects, labels, and set data* text files using the read.table function and rename their respective columns with appropriate labels.
-3. Combine the rows of the training and test datasets for subjects, labels and set data using the rbind function.
-4. Merge the columns of the combined subjects, labels and set data using the cbind function to create one data set.
-5. Extract the measurements on the mean and standard deviation for each measurement using the %>% and select function.
+2. Load the *features, activity labels, training and test subjects, labels, and set data* text files using the *read.table* function and rename their respective columns with appropriate labels.
+3. Combine the rows of the training and test datasets for subjects, labels and set data using the *rbind* function.
+4. Merge the columns of the combined subjects, labels and set data using the *cbind* function to create one data set.
+5. Extract the measurements on the mean and standard deviation for each measurement using the *%>%* and *select* function.
 6. Rename the activities column in the data set with descriptive names by subsetting.
-7. Label the dataset with appropriate descriptive variable names using the gsub function.
-8. Create a second, independent tidy data set with the mean of each variable for each activity and each subject using the %>%, group_by and summarise_all function.
-9. Extract the new tidy data set using the write.table function.
+7. Label the dataset with appropriate descriptive variable names using the *gsub* function.
+8. Create a second, independent tidy data set with the mean of each variable for each activity and each subject using the *%>%, group_by and summarise_all* function.
+9. Extract the new tidy data set using the *write.table* function.
 
 Description of the variables in the tidydata.txt file
 -------------------------------------------------------
