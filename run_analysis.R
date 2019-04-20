@@ -56,6 +56,4 @@ names(filteredData) <- rename
 
 #Creating a second, independent tidy data set with the average of each variable for each activity and each subject
 tidyData <- filteredData %>% group_by(subject,activity) %>% summarise_all(funs(mean))
-write.table(tidyData,"tidyData.txt",row.names = FALSE)
-
-knit("makeCodebook.Rmd", output = "codebook.md", encoding = "ISO8859-1", quiet = TRUE)
+write.table(tidyData,"tidydata.txt",col.names = TRUE)
