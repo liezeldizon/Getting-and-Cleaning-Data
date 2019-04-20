@@ -8,7 +8,6 @@ The data linked from the course website represent data collected from the accele
 
 Creating the Tidy Dataset
 --------------------------
-
 ### The dataset was prepared for analysis by performing the following steps:
 *Open the run_analysis.R script to check the actual codes used per step.*
 1. Download and unzip necessary files from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
@@ -21,35 +20,41 @@ Creating the Tidy Dataset
 8. Create a second, independent tidy data set with the mean of each variable for each activity and each subject using the %>%, group_by and summarise_all function.
 9. Extract the new tidy data set using the write.table function.
 
-
-
-
 Description of the variables in the tidydata.txt file
 -------------------------------------------------------
-The tidydata.txt file consists of 180 observations and 88 variables that includes the average of each variable for each activity and each subject. 
+The tidydata.txt file consists of 180 observations and 88 variables that includes the average of each variable for each activity and each subject. The schema used in naming the variables and the classes of the variables are enumerated below:
 
-* **subject** - subject id
-* **activity** - activity performed
-* **Time_BodyAccelerometer.mean** - mean time acceleration of the body per direction (X, Y or Z).
-* **Time_GravityAccelerometer.mean** - mean time acceleration of the gravity per direction (X, Y or Z).
-* **Time_BodyGyroscope.mean** x,y,x
-* **Time_BodyGyroscopeJerk.mean** x,y,x
-* **Time_BodyAccelerometerMagnitude.mean**
-* **Time_GravityAccelerometerMagnitude.mean**
-* **Time_BodyAccelerometerJerkMagnitude.mean**
-* **Time_BodyGyroscopeMagnitude.mean**
-* **Time_BodyGyroscopeJerkMagnitude.mean**
-* **Frequency_BodyAccelerometer.mean** x,y,z
-* **Time_BodyGyroscope.mean**
-* **Time_BodyGyroscope.mean**
-
-
-Short description of what the variable describes.
-
-Some information on the variable including: - Class of the variable - Unique values/levels of the variable - Unit of measurement (if no unit of measurement list this as well) - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels).
-
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-#### Notes on variable 1:
-
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.)
+* **subject** - *int*, subject id
+* **activity** - *factor*, activity performed
+* **Time_BodyAccelerometer.mean** - *num*, mean time acceleration of the body per direction (X, Y or Z).
+* **Time_GravityAccelerometer.mean** - *num*, mean time acceleration of the gravity accelerometer per direction (X, Y or Z).
+* **Time_BodyGyroscope.mean** - *num*, mean time body gyroscope measurement per direction (X,Y or Z).
+* **Time_BodyGyroscopeJerk.mean** - *num*, mean time jerk signal measurement per direction (X,Y or Z).
+* **Time_BodyAccelerometerMagnitude.mean** - *num*, mean time magnitude of body accelerometer measurement.
+* **Time_GravityAccelerometerMagnitude.mean** - *num*, mean time magnitude of gravity accelerometer measurement.
+* **Time_BodyAccelerometerJerkMagnitude.mean** - *num*, mean time magnitude of body accelerometer jerk measurement.
+* **Time_BodyGyroscopeMagnitude.mean** - *num*, mean time magnitude of body gyroscope measurement.
+* **Time_BodyGyroscopeJerkMagnitude.mean** - *num*, mean time magnitude of body gyroscope jerk measurement.
+* **Frequency_BodyAccelerometer.mean** - *num*, mean frequency body accelerometer measurement per direction (X,Y or Z).
+* **Frequency_BodyAccelerometerJerk.mean** - *num*, mean frequency body accelerometer jerk measurement per direction (X,Y or Z).
+* **Frequency_BodyGyroscope.mean** - *num*, mean frequency body gyroscope measurement per direction (X,Y or Z).
+* **Frequency_BodyAccelerometerMagnitude.mean** - *num*, mean frequency body accelerometer magniture measurement per direction (X,Y or Z).
+* **Frequency_BodyBodyAccelerometerJerkMagnitude.mean** -  *num*, mean frequency body accelerometer jerk magnitude per direction (X,Y or Z).
+* **Frequency_BodyBodyGyroscopeMagnitude.mean** - *num*, mean frequency body gyroscope magnitude measurement.
+* **Frequency_BodyBodyGyroscopeJerkMagnitude.mean** - *num*, mean frequency body gyroscope jerk magnitude measurement.
+* **Time_BodyAccelerometer.std** - *num*, standard deviation of time acceleration of the body per direction (X, Y or Z).
+* **Time_GravityAccelerometer.std** - *num*, standard deviation of time acceleration of the gravity accelerometer per direction (X, Y or Z).
+* **Time_BodyGyroscope.std** - *num*, standard deviation of time body gyroscope measurement per direction (X,Y or Z).
+* **Time_BodyGyroscopeJerk.std** - *num*, standard deviation of time jerk signal measurement per direction (X,Y or Z).
+* **Time_BodyAccelerometerMagnitude.std** - *num*, standard deviation of time magnitude of body accelerometer measurement.
+* **Time_GravityAccelerometerMagnitude.std**  - *num*, standard deviation of time magnitude of gravity accelerometer measurement.
+* **Time_BodyAccelerometerJerkMagnitude.std** - *num*, standard deviation of time magnitude of body accelerometer jerk measurement.
+* **Time_BodyGyroscopeMagnitude.std**  - *num*, standard deviation of time magnitude of body gyroscope measurement.
+* **Time_BodyGyroscopeJerkMagnitude.std** - *num*, standard deviation of time magnitude of body gyroscope jerk measurement.
+* **Frequency_BodyAccelerometer.std**- *num*, standard deviation of frequency body accelerometer measurement per direction (X,Y or Z).
+* **Frequency_BodyAccelerometerJerk.std** - *num*, standard deviation of frequency body accelerometer jerk measurement per direction (X,Y or Z).
+* **Frequency_BodyGyroscope.std** - *num*, standard deviation of frequency body gyroscope measurement per direction (X,Y or Z).
+* **Frequency_BodyAccelerometerMagnitude.std** - *num*, standard deviation of frequency body accelerometer magniture measurement per direction (X,Y or Z).
+* **Frequency_BodyBodyAccelerometerJerkMagnitude.std** -  *num*, standard deviation of frequency body accelerometer jerk magnitude per direction (X,Y or Z).
+* **Frequency_BodyBodyGyroscopeMagnitude.std** - *num*, standard deviation of frequency body gyroscope jerk magnitude measurement.
+* **Frequency_BodyBodyGyroscopeJerkMagnitude.std** - *num*, standard deviation of frequency body gyroscope jerk magnitude measurement.
